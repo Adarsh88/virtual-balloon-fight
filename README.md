@@ -23,7 +23,7 @@ Once the balloon hits the user's x,y coordinates , it bleeps and informs the use
 
 ![Screenshot_20200830-181848](https://user-images.githubusercontent.com/44509204/91659702-1c3c0400-eaef-11ea-9050-8b23c5240ca0.png)
 
-5. We shoot the water balloon till it hits a player. A message is shown to all users who are using propper terminals as well as a guaranteed message to you, if it hits a player. (The terminal in the screenshot did not get the global message)
+5. We shoot the water balloon till it hits a player. A message is shown to all users who are using propper terminals as well as a gauaranteed message to you, if it hits a player. (The terminal in the screenshot did not get the global message)
 
 ![Screenshot_20200830-181934](https://user-images.githubusercontent.com/44509204/91659812-e0ee0500-eaef-11ea-9d0a-cdb722f55e9a.png)
 
