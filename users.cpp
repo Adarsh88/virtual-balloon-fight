@@ -114,6 +114,37 @@ int main(){
 			std::cerr<<"ERROR: "<<sqlite3_errmsg(db)<<"\n";
 		}
 	}
+	if(command=='?'){
+		//get user location
+		std::string name;
+		std::cin>>name;
+		char qry[]="SELECT x,y FROM users WHERE name=?;";
+		sqlite3_stmt *stmt;
+		const char * pzTail=nullptr;
+		rc=sqlite3_prepare_v2(db,qry,-1,&stmt,&pzTail);
+		if(rc!=SQLITE_OK){
+			std::cerr<<"ERROR: "<<rc<<"\n";
+			std::cerr<<"ERROR: "<<sqlite3_errmsg(db)<<"\n";
+		}
+		rc=sqlite3_bind_text(stmt,1,name.c_str(),-1,SQLITE_TRANSIENT);
+		if(rc!=SQLITE_OK){
+			std::cerr<<"ERROR: "<<rc<<"\n";
+			std::cerr<<"ERROR: "<<sqlite3_errmsg(db)<<"\n";
+		}
+		rc=sqlite3_step(stmt);
+		if(rc!=SQLITE_DONE && rc!=SQLITE_ROW){
+			std::cerr<<"ERROR: "<<rc<<"\n";
+			std::cerr<<"ERROR: "<<sqlite3_errmsg(db)<<"\n";
+		}
+		if(rc==SQLITE_ROW){
+			std::cout<<sqlite3_column_int(stmt,0)<<' '<<sqlite3_column_int(stmt,1)<<'\n';
+		}
+		rc = sqlite3_finalize(stmt);
+		if(rc!=SQLITE_OK){
+			std::cerr<<"ERROR: "<<rc<<"\n";
+			std::cerr<<"ERROR: "<<sqlite3_errmsg(db)<<"\n";
+		}
+	}
 
 	sqlite3_close(db);
 }
