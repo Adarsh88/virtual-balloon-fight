@@ -19,11 +19,11 @@ Once the balloon hits the user's x,y coordinates , it bleeps and informs the use
 
 ![Screenshot_20200830-181848](https://user-images.githubusercontent.com/44509204/91659702-1c3c0400-eaef-11ea-9050-8b23c5240ca0.png)
 
-4. We shoot the water balloon till it hits a player. We can hear a bleep and a message is shown, if it hits a player.
+4. We shoot the water balloon till it hits a player. A message is shown to all users who are using propper terminals as well as a guaranteed message to you, if it hits a player. (The terminal in the screenshot did not get the global message)
 
 ![Screenshot_20200830-181934](https://user-images.githubusercontent.com/44509204/91659812-e0ee0500-eaef-11ea-9d0a-cdb722f55e9a.png)
 
-5. We could actually shoot ourselves if we dont give any coordinates XD.
+5. We could actually shoot ourselves if we aren't careful XD. (say, not give the throw enough force)
 
 ![Screenshot_20200830-181949](https://user-images.githubusercontent.com/44509204/91659861-172b8480-eaf0-11ea-9c36-8bf33511fd13.png)
 
