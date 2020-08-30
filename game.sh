@@ -24,3 +24,24 @@ shoot(){
 		wall "$NAME hit $a with a water balloon"
 	done
 }
+
+map(){
+	xy=($coords)
+	x=${xy[0]}
+	y=${xy[1]}
+	for j in $(seq $(($y-10)) $(($y+10))); do
+		for i in $(seq $(($x-10)) $(($x+10))); do
+			probe=$(echo "x $i $j"|./users)
+			if [ "$probe" != "" ] ;then
+				if [ "$i" -eq "$x" -a "$j" -eq "$y" ] ;then
+					echo -n " @ "
+				else
+					echo -n " # "
+				fi
+			else
+				echo -n " . "
+			fi
+		done
+		echo
+	done
+}
