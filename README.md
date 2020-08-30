@@ -6,6 +6,10 @@ Each user have to register their name and also their position in x,y coordinates
 So after 2 or more users are in the database , we can start the game.
 The user can then throw the water balloons by providing the x and y coordinates, the throw heading, strength and height(angle).
 Once the balloon hits the user's x,y coordinates , it bleeps and informs the user that the vitctim is hit by the water balloon.
+## Here is the flowchart
+
+![download (1)](https://user-images.githubusercontent.com/44509204/91660875-03831c80-eaf6-11ea-92ed-94c38c24c360.png)
+
 ## How to run the game
 1. Enter you NAME.
 
